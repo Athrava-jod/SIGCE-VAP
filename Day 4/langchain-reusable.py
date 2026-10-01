@@ -8,11 +8,11 @@ import sys
 # Ensure UTF-8 output on Windows console
 sys.stdout.reconfigure(encoding="utf-8")
 
-# Set GROQ_API_KEY in your environment before running this script.
+# Using qwen/qwen3.8-27b with temperature=0 and your Groq API key
 llm = ChatGroq(
     model="qwen/qwen3.8-27b",
     temperature=0,
-    api_key=os.environ["GROQ_API_KEY"],
+    api_key=os.environ.get("GROQ_API_KEY", "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"),
 )
 
 prompt = ChatPromptTemplate.from_template(

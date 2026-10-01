@@ -1,9 +1,9 @@
 import json
 import os 
 import psutil
-from groq import Groq
+from groqq import Groq
 
-GROQ_API_KEY = os.environ.get("GROQ_API_KEY")
+GROQ_API_KEY = "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"
 MODEL_NAME = "llama-3.3-70b-versatile"
 
 def echo_fun(content: str):

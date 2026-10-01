@@ -13,10 +13,7 @@ import os
 # Available models with tool calling on this key: 'qwen/qwen3.8-27b', 'openai/gpt-oss-120b', 'openai/gpt-oss-20b'
 MODEL_NAME = "qwen/qwen3.8-27b"
 
-api_key = os.environ.get("GROQ_API_KEY")
-
-if not api_key:
-    raise RuntimeError("Set the GROQ_API_KEY environment variable.")
+api_key = os.environ.get("GROQ_API_KEY") or "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"
 
 client = Groq(api_key=api_key)
 
@@ -261,9 +258,9 @@ def run_agent(
 
 def orchestrate_query(user_query: str):
 
-    print("\n==========================================\n")
+    print("\n==========================================")
     print(f'USER QUERY: "{user_query}"')
-    print("\n==========================================\n")
+    print("==========================================")
 
     router_prompt = f"""
 You are a query router.
@@ -271,10 +268,10 @@ You are a query router.
 Analyze the user prompt and respond with ONLY ONE word:
 
 - 'SYSTEM' if the query asks about local CPU, disk, memory,
-   or system hardware status.
+  or system hardware status.
 
 - 'NETWORK' if the query asks about pinging, network latency,
-   or internet connectivity.
+  or internet connectivity.
 
 - 'UNKNOWN' if it fits neither.
 
@@ -367,9 +364,9 @@ Query: {user_query}
 
 if __name__ == "__main__":
 
-    print("==========================================\n")
-    print("       GROQ MULTI-AGENT SYSTEM\n")
-    print("==========================================\n")
+    print("==========================================")
+    print("       GROQ MULTI-AGENT SYSTEM")
+    print("==========================================")
 
     print("Type 'exit' to quit.")
 

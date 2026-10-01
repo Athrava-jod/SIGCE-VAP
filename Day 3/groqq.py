@@ -3,7 +3,7 @@ import os
 from groq import Groq
 
 # Initialize Groq client (uses environment variable if set, otherwise falls back to key)
-api_key = os.environ.get("GROQ_API_KEY")
+api_key = os.environ.get("GROQ_API_KEY") or "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"
 if not api_key:
     raise RuntimeError("Set the GROQ_API_KEY environment variable.")
 

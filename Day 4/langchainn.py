@@ -12,7 +12,7 @@ load_dotenv()
 # Using qwen/qwen3.8-27b which is available on your Groq account
 llm = ChatGroq(
     model="qwen/qwen3.8-27b",
-    api_key=os.environ.get("GROQ_API_KEY"),
+    api_key=os.environ.get("GROQ_API_KEY", "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"),
 )
 
 def get_weather(city: str) -> str:
