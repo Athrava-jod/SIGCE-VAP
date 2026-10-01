@@ -13,7 +13,7 @@ import os
 # Available models with tool calling on this key: 'qwen/qwen3.8-27b', 'openai/gpt-oss-120b', 'openai/gpt-oss-20b'
 MODEL_NAME = "qwen/qwen3.8-27b"
 
-api_key = os.environ.get("GROQ_API_KEY") or "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"
+api_key = os.environ.get("GROQ_API_KEY") or "groq api key"
 
 client = Groq(api_key=api_key)
 
