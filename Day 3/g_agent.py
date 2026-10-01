@@ -3,7 +3,7 @@ import os
 import psutil
 from groqq import Groq
 
-GROQ_API_KEY = "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"
+GROQ_API_KEY = "groq api key"
 MODEL_NAME = "llama-3.3-70b-versatile"
 
 def echo_fun(content: str):
