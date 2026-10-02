@@ -21,7 +21,7 @@ from reportlab.lib.pagesizes import A4
 llm = ChatGroq(
     model="openai/gpt-oss-20b",
     temperature=0.3,
-    api_key=os.environ.get("GROQ_API_KEY", "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"),
+    api_key=os.environ.get("GROQ_API_KEY"),
 )
 
 
