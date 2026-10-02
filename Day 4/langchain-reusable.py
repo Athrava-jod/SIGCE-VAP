@@ -12,7 +12,7 @@ sys.stdout.reconfigure(encoding="utf-8")
 llm = ChatGroq(
     model="qwen/qwen3.8-27b",
     temperature=0,
-    api_key=os.environ.get("GROQ_API_KEY", "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"),
+    api_key=os.environ.get("GROQ_API_KEY",),
 )
 
 prompt = ChatPromptTemplate.from_template(
